@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<!-- Page content -->
+
+<!--NEW HOMEPAGE CONTENT HERE-->
+
+<!--WELCOME!-->
+<!--header slideshow here-->
+<br><br><br><br>
+<header>
+<div>
+  <div class="w3-content">
+      <div class="w3-display-container mySlides">
+      <img src="{{ site.baseurl }}/img/1.png" alt="slider cell image" style="width:100%">
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{ site.baseurl }}/img/2.png" alt="slider cell image" style="width:100%">
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{ site.baseurl }}/img/3.png" alt="slider cell image" style="width:100%">
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="{{ site.baseurl }}/img/4.png" alt="slider cell image" style="width:100%">
+    </div>
+  </div>
+</div>
+<!--loose the buttons
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+buttons gone-->
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-16" id="about">
+  <h3 class="w3-center">Basbaum Lab</h3>
+  <p class="w3-center"><em>University of California San Francisco</em></p>
+  <p>Located at UCSF's Mission Bay campus The Basbaum lab is a group of Students, Interns and Postdoctuoral Fellows commited to pain research. </p>
+</div>
+
+<!-- Add slideshow script -->
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+</script>

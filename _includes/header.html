@@ -1,0 +1,81 @@
+<!-- UCSF Banner Here -->
+<div class="w3-top">
+  <div id="ucsf-banner-nav" class="no-logo">
+    <div class="top-header-container row">
+        <ul class="menu">
+          <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+          <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+          <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+          <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+        </ul>
+    </div>
+  </div>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-bar w3-white w3-card-2" id="myNavbar">
+  <a href="{{ site.baseurl }}/index.html" class="w3-bar-item w3-button w3-wide">Basbaum Lab @ UCSF</a>
+     <!-- Right-sided navbar links -->
+     <div class="w3-right w3-hide-small">
+       <a href="{{ site.baseurl }}/contact" class="w3-bar-item w3-button">contact</a>
+       <a href="{{ site.baseurl }}/people" class="w3-bar-item w3-button">people</a>
+       <a href="{{ site.baseurl }}/publications" class="w3-bar-item w3-button">publications</a>
+       <a href="{{ site.baseurl }}/research" class="w3-bar-item w3-button">research</a>
+       <a href="http://anatomy.ucsf.edu" class="w3-bar-item w3-button">Anatomy Department</a>
+     </div>
+     <div>
+     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+       <i class="fa fa-bars"></i>
+     </a>
+   </div>
+ </div>
+</div>
+ <!-- Sidebar on small screens when clicking the menu icon -->
+ <nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
+   <a href="{{ site.baseurl }}/contact" onclick="w3_close()" class="w3-bar-item w3-button">contact</a>
+   <a href="{{ site.baseurl }}/people" onclick="w3_close()" class="w3-bar-item w3-button">people</a>
+   <a href="{{ site.baseurl }}/publications" onclick="w3_close()" class="w3-bar-item w3-button">publications</a>
+   <a href="{{ site.baseurl }}/research" onclick="w3_close()" class="w3-bar-item w3-button">research</a>
+   <a href="http://anatomy.ucsf.edu" onclick="w3_close()" class="w3-bar-item w3-button">Anatomy Department</a>
+ </nav>
+ </header>
+
+
+ <!--SCRIPTS HERE -->
+<script>
+ // Toggle between showing and hiding the sidebar when clicking the menu icon
+ var mySidebar = document.getElementById("mySidebar");
+
+ function w3_open() {
+     if (mySidebar.style.display === 'block') {
+         mySidebar.style.display = 'none';
+     } else {
+         mySidebar.style.display = 'block';
+     }
+ }
+
+ // Close the sidebar with the close button
+ function w3_close() {
+     mySidebar.style.display = "none";
+ }
+
+ // Used to toggle the menu on small screens when clicking on the menu button
+ function myFunction() {
+     var x = document.getElementById("navDemo");
+     if (x.className.indexOf("w3-show") == -1) {
+         x.className += " w3-show";
+     } else {
+         x.className = x.className.replace(" w3-show", "");
+     }
+ }
+
+ // When the user clicks anywhere outside of the modal, close it
+ var modal = document.getElementById('ticketModal');
+ window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = "none";
+   }
+ }
+ </script>
+ <!--END SCRIPTS-->
