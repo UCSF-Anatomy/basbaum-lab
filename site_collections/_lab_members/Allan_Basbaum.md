@@ -1,9 +1,9 @@
 ---
 name: Allan Basbaum
 degree: PhD
-position: Principal Investigator, Professor & Chair
+position: Professor & Chair, Department of Anatomy
 positionCode: 0groupLeader
 email: Allan.Basbaum@ucsf.edu
 website:
-imgLink: ../img/lab_members/Allan_Basbaum.jpg
+imgLink: Allan_Basbaum.jpg
 ---

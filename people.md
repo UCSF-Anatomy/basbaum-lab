@@ -9,9 +9,10 @@ permalink: /people/
 
 {% assign lab_member = site.lab_members | where:"positionCode", "0groupLeader"  | first %}
 
-<div class="labMembersContainerTop">
+<div class="labMembersContainerTop labMembersContainer">
   <div>
-    <a href="{{ lab_member.imgLink }}" target="_blank"><img class="labMembers" src="{{ lab_member.imgLink }}" /></a>
+    {% assign imgUrlLink = "/img/lab_members/" | prepend: site.baseurl | append: lab_member.imgLink %}
+    <a href="{{ imgUrlLink }}" target="_blank"><img class="labMembers" src="{{ imgUrlLink }}" /></a>
   </div>
     <br>
   <div>
@@ -25,13 +26,20 @@ permalink: /people/
 ### Administrative Support
 {% assign lab_member = site.lab_members | where:"positionCode", "1admin"  | first %}
 
-<div class="labMembersContainerTop">
+<div class="labMembersContainerTop labMembersContainer">
   <div>
-    <a href="{{ lab_member.imgLink }}" target="_blank"><img class="labMembers" src="{{ lab_member.imgLink }}" /></a>
+    {% assign imgUrlLink = "/img/lab_members/" | prepend: site.baseurl | append: lab_member.imgLink %}
+    <a href="{{ imgUrlLink }}" target="_blank"><img class="labMembers" src="{{ imgUrlLink }}" /></a>
   </div>
     <br>
   <div>
-    <span class="labMemberName">{{ lab_member.name }}, {{ lab_member.degree }}</span>
+    {% assign degree = lab_member.degree | strip_newlines %}
+    {% assign websiteMember = lab_member.website | strip_newlines %}
+    {% if degree == "" %}
+      <span class="labMemberName">{{ lab_member.name }}</span>
+    {% else %}
+      <span class="labMemberName">{{ lab_member.name }}, {{ degree }}</span>
+    {% endif %}
     <span class="labMemberPosition">{{ lab_member.position }}</span>
     <span class="labMemberEmail">{{ lab_member.email | replace:'.',' [dot] ' | replace:'@',' [at] '}}</span>
     <div class="labMemberContent">{{ lab_member.content | markdownify }}</div>
@@ -48,7 +56,8 @@ permalink: /people/
   {% endif %}
   <div class="labMembersContainer">
   	<div>
-  		<a href="{{ lab_member.imgLink }}" target="_blank"><img class="labMembers" src="{{ lab_member.imgLink }}" /></a>
+      {% assign imgUrlLink = "/img/lab_members/" | prepend: site.baseurl | append: lab_member.imgLink %}
+  		<a href="{{ imgUrlLink }}" target="_blank"><img class="labMembers" src="{{ imgUrlLink }}" /></a>
   	</div>
     <br>
   	<div>

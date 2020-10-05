@@ -1,9 +1,9 @@
 ---
 name: Veronica Craik
 degree:
-position:
+position: Junior Speciliast
 positionCode: 5techs
-email:
+email: Veronica.Craik@ucsf.edu
 website:
-imgLink: ../img/lab_members/placeholder.jpg
+imgLink: Veronica_Craik.jpg
 ---

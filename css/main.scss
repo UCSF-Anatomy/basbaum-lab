@@ -64,6 +64,11 @@ img.labMembers, .labMembersContainerTop img.labMembers{
 	/*width: 50%;*/
   height: 200px;
   filter: grayscale(50%);
+  outline: 5px solid white;
+  /*box-shadow: 1px 1px;*/
+  border: 1px solid #DDDDDD;
+  padding: 10px;
+  background: #FFF;
 }
 .labMembersContainerTop img.labMembers{
   /*width: 20%;*/
@@ -72,10 +77,12 @@ img.labMembers, .labMembersContainerTop img.labMembers{
 .labMembersContainer:hover img.labMembers, .labMembersContainerTop:hover img.labMembers{
 	/*opacity: 0.5;*/
   /*border: #052049 solid 7px;*/
-  outline: 5px solid #052049;
+  /*outline: 5px solid #052049;*/
+  background: #052049;
   filter: grayscale(0%);
   /*border-radius: 5px;*/
 }
+
 .labMembersContainer:hover .labMemberName, .labMembersContainerTop:hover .labMemberName{
   /*color:#052049;*/
   color:red;
@@ -93,12 +100,23 @@ img.labMembers, .labMembersContainerTop img.labMembers{
   /*height:40%;*/
   padding:5%;
 }
+.labMembersContainer, .labMembersContainerTop{
+  font-family:Helvetica, Arial,sans-serif !important;
+}
+.labMembersContainer:hover .labMemberContent{
+  font-size:1em;
+}
 .grid-container {
   display: grid;
   /*grid-template-columns: auto auto auto;*/
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
   /*background-color: #2196F3;*/
   padding: 10px;
+  /*width: 100%;*/
+}
+.labMembersContainerTop{
+  /*width: 30%;*/
+  padding:0%;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -121,7 +139,7 @@ html {
 .labMemberWebsite{
   font-size: 0.7em;
 }
-.labMemberEmail:hover{
+.labMembersContainer:hover .labMemberEmail{
   color: blue;
 }
 .labMemberWebsite:hover{

@@ -5,5 +5,5 @@ position: Assistant Professor
 positionCode: 5special
 email:
 website:
-imgLink: ../img/lab_members/Marlys_Fassett.jpg
+imgLink: Marlys_Fassett.jpg
 ---
