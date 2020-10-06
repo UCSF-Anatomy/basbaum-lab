@@ -9,8 +9,21 @@
 title: Basbaum Lab @ UCSF
 email: ziggy.cat@ucsf.edu
 description:  Located at UCSF's Mission Bay campus The Basbaum lab is a group of Students, Interns and Postdoctuoral Fellows commited to pain research.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/basbaum-lab" # the subpath of your site, e.g. /blog
+relative_url : ".." # the subpath of your site, e.g. /blog
 url: "http://basbaumlab.ucsf.edu" # the base hostname & protocol for your site#twitter_username: jekyllrb
 #github_username:  jekyll
 # Build settings
 markdown: kramdown
+collections_dir: site_collections
+# collections:
+#   - lab_members
+#     output: true
+collections:
+  lab_members:
+    people: true
+    order:
+      - Allan_Basbaum.md
+      - Linda_Toschi-Chambers.md
+    sort_by: positionCode
+    # output: true

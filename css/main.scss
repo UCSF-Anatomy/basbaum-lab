@@ -51,3 +51,100 @@
         "layout",
         "banners"
 ;
+
+// People page
+div, img, span {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; 
+}
+
+img.labMembers, .labMembersContainerTop img.labMembers{
+	/*width: 50%;*/
+  height: 200px;
+  filter: grayscale(50%);
+  outline: 5px solid white;
+  /*box-shadow: 1px 1px;*/
+  border: 1px solid #DDDDDD;
+  padding: 10px;
+  background: #FFF;
+}
+.labMembersContainerTop img.labMembers{
+  /*width: 20%;*/
+  /*height: 200px;*/
+}
+.labMembersContainer:hover img.labMembers, .labMembersContainerTop:hover img.labMembers{
+	/*opacity: 0.5;*/
+  /*border: #052049 solid 7px;*/
+  /*outline: 5px solid #052049;*/
+  background: #052049;
+  filter: grayscale(0%);
+  /*border-radius: 5px;*/
+}
+
+.labMembersContainer:hover .labMemberName, .labMembersContainerTop:hover .labMemberName{
+  /*color:#052049;*/
+  color:red;
+}
+.labMemberPosition, .labMemberEmail,.labMemberName{
+  display:block;
+}
+.labMembersContainerTop{
+  /*width: 30%;*/
+}
+.labMembersContainer{
+  /*display:grid;*/
+  /*float:left;*/
+  /*width:20%;*/
+  /*height:40%;*/
+  padding:5%;
+}
+.labMembersContainer, .labMembersContainerTop{
+  font-family:Helvetica, Arial,sans-serif !important;
+}
+.labMembersContainer:hover .labMemberContent{
+  font-size:1em;
+}
+.grid-container {
+  display: grid;
+  /*grid-template-columns: auto auto auto;*/
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
+  /*background-color: #2196F3;*/
+  padding: 10px;
+  /*width: 100%;*/
+}
+.labMembersContainerTop{
+  /*width: 30%;*/
+  padding:0%;
+}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+.labMemberContent{
+  font-size: 0.7em;
+}
+.labMemberEmail{
+  font-size: 0.8em;
+}
+.labMemberWebsite{
+  font-size: 0.7em;
+}
+.labMembersContainer:hover .labMemberEmail{
+  color: blue;
+}
+.labMemberWebsite:hover{
+  color: blue;
+}
+.labMemberName{
+  font-weight: bold;
+}
