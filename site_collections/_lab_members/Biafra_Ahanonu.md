@@ -1,7 +1,7 @@
 ---
 name: Biafra Ahanonu
 degree: PhD
-position: Postdoctoral Scholar
+position: Postdoctoral Fellow<br><em>HHMI Hanna H. Gray Fellow</em>
 positionCode: 3postdoc
 email: biafra [dot] ahanonu [at] ucsf.edu
 website: https://bahanonu.com
