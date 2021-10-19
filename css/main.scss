@@ -52,7 +52,27 @@
         "banners"
 ;
 
-// People page
+/* Font */
+
+body{
+  /*font-family:Helvetica, Arial,sans-serif !important;*/
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+.labMembersContainer, .labMembersContainerTop{
+  /*font-family:Helvetica, Arial,sans-serif !important;*/
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+
+/* HEADER*/
+
+.headerDept{
+  /*font-style: italic;*/
+}
+.siteHeaderTop{
+  font-family:Helvetica, Arial,sans-serif !important;
+}
+
+/* People page*/
 div, img, span {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -69,6 +89,10 @@ img.labMembers, .labMembersContainerTop img.labMembers{
   border: 1px solid #DDDDDD;
   padding: 10px;
   background: #FFF;
+
+  -webkit-border-radius: 5%;
+     -moz-border-radius: 5%;
+          border-radius: 5%;
 }
 .labMembersContainerTop img.labMembers{
   /*width: 20%;*/
@@ -99,9 +123,6 @@ img.labMembers, .labMembersContainerTop img.labMembers{
   /*width:20%;*/
   /*height:40%;*/
   padding:5%;
-}
-.labMembersContainer, .labMembersContainerTop{
-  font-family:Helvetica, Arial,sans-serif !important;
 }
 .labMembersContainer:hover .labMemberContent{
   font-size:1em;
@@ -147,4 +168,16 @@ html {
 }
 .labMemberName{
   font-weight: bold;
+}
+
+.formerLabMembers{
+  column-count: 3;
+}
+.formerLabMembers ul{
+  margin: 0;
+}
+@media only screen and (max-width: 600px) {
+  .formerLabMembers{
+    column-count: 1;
+  }
 }

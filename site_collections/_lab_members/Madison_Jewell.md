@@ -1,9 +1,9 @@
 ---
 name: Madison Jewell
-degree:
+degree: BS
 position: Junior Specialist
 positionCode: 5techs
-email: Madison.Jewell@ucsf.edu
+email: madison.jewell@ucsf.edu
 website:
 imgLink: Madison_Jewell.JPG
 ---
