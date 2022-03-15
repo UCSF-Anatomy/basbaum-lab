@@ -1,7 +1,10 @@
 ---
 name: NAME
+degree: DEGREE
 position: POSITION
-positionCode: POSITION_SPEC
-imgLink: ../img/lab_members/placeholder.jpg
+positionCode: 3postdoc
+email: EMAIL
+website: WEBSITE
+imgLink: imgLink
 ---
 DESCRIPTION
