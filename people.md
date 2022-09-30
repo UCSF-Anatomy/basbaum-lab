@@ -7,7 +7,7 @@ permalink: /people/
 
 ## Primary Investigator
 
-{% assign lab_member = site.lab_members | where:"positionCode", "0groupLeader"  | first %}
+{% assign lab_member = site.lab_members | where:"positionCode", "0groupLeader" | first %}
 
 <div class="labMembersContainerTop labMembersContainer">
   <div>
@@ -49,6 +49,9 @@ permalink: /people/
 ## Current Lab Members
 <div class="grid-container">
 {% for lab_member in site.lab_members %}
+  {% if lab_member.current == 0 %}
+    {% continue %}
+  {% endif %}
   {% if lab_member.positionCode == "0groupLeader" %}
     {% continue %}
   {% elsif lab_member.positionCode == "1admin" %}
@@ -68,7 +71,12 @@ permalink: /people/
       {% else %}
         <span class="labMemberName">{{ lab_member.name }}, {{ degree }}</span>
       {% endif %}
-  		<span class="labMemberPosition">{{ lab_member.position }}</span>
+  		{% if lab_member.funding == "" %}
+        adasdsa
+        <span class="labMemberPosition">{{ lab_member.position }}</span>
+      {% else %}
+        <span class="labMemberPosition">{{ lab_member.position }}<br><em>{{ lab_member.funding }}</em></span>
+      {% endif %}
       <span class="labMemberEmail">{{ lab_member.email | replace:'.',' [dot] ' | replace:'@',' [at] '}}</span>
       {% if websiteMember == "" %}
         <!-- <span class="labMemberWebsite"><a href="{{ websiteMember }}" target="_blank"></a></span> -->
@@ -131,6 +139,13 @@ permalink: /people/
 * Julia Kuhn
 * Line Loken
 * Christopher Alvaro
+* Xidao Wang
+{% for lab_member in site.lab_members %}
+  {% if lab_member.current == 0 and lab_member.positionCode == "3postdoc" %}
+    {% assign imgUrlLink = "/img/lab_members/" | prepend: site.baseurl | append: lab_member.imgLink %}
+* <a href="{{ imgUrlLink }}" target="_blank">{{ lab_member.name }}</a>
+  {% endif %}
+{% endfor %}
 <!-- Current
 Joao Braz
 Xiaobing Yu
@@ -172,6 +187,17 @@ Julian Motzkin
 <!-- Current
 Cindy Liu 
 -->
+</div>
+
+### Specialists
+
+<div class='formerLabMembers' markdown="1">
+{% for lab_member in site.lab_members %}
+  {% if lab_member.current == 0 and lab_member.positionCode == "5techs" %}
+  {% assign imgUrlLink = "/img/lab_members/" | prepend: site.baseurl | append: lab_member.imgLink %}
+* <a href="{{ imgUrlLink }}" target="_blank">{{ lab_member.name }}</a>
+  {% endif %}
+{% endfor %}
 
 </div>
 
